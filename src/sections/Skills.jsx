@@ -10,7 +10,7 @@ export default function Skills() {
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          <SkillBar label="Game Design" level={0} />
+          <SkillBar label="Game Design" level={80} />
           <SkillBar label="Level Design" level={0} />
           <SkillBar label="Prototyping" level={0} />
           <SkillBar label="UI / UX" level={0} />

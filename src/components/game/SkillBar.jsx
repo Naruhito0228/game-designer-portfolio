@@ -8,8 +8,8 @@ export default function SkillBar({ label, level = 50 }) {
 
       <div className="mt-3 h-3 w-full rounded-full bg-white/10 overflow-hidden">
         <div
-          className="h-full rounded-full bg-purple-500/70"
-          style={{ width: `${level}%` }}
+            className="h-full rounded-full bg-purple-500/70 transition-all duration-700"
+            style={{ width: `${level}%` }}
         />
       </div>
 
