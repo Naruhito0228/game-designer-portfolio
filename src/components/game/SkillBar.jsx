@@ -1,6 +1,12 @@
 export default function SkillBar({ label, level = 50 }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <div className="relative overflow-hidden rounded-2xl border p-5
+                border-purple-200 bg-white/85
+                dark:border-white/10 dark:bg-neutral-950/60">
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br
+                  from-purple-200/35 to-transparent
+                  dark:from-purple-500/10" />
+  <div className="relative">
       <div className="flex items-center justify-between">
         <p className="font-semibold">{label}</p>
         <p className="text-sm text-white/60">{level}%</p>
@@ -14,6 +20,7 @@ export default function SkillBar({ label, level = 50 }) {
       </div>
 
       <p className="mt-3 text-xs text-white/40">Stat updated ✦</p>
+    </div>
     </div>
   );
 }

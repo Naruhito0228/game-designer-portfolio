@@ -7,5 +7,13 @@ html {
 }
 
 body {
-  @apply bg-neutral-950 text-white antialiased;
+  @apply bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-white;
+}
+
+.panel {
+  @apply rounded-2xl border bg-white/70 text-neutral-900 border-black/10;
+  @apply dark:bg-white/5 dark:text-white dark:border-white/10;
+}
+.panel-hover {
+  @apply transition hover:bg-black/5 dark:hover:bg-white/10;
 }

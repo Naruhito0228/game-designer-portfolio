@@ -7,15 +7,22 @@ export default function QuestCard({
   link,
 }) {
   return (
-    <div className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+    <div className="group relative overflow-hidden rounded-2xl border p-6 transition
+                    border-purple-200 bg-white/85 hover:bg-white
+                    dark:border-white/10 dark:bg-neutral-950/60 dark:hover:bg-white/5">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br
+                      from-purple-200/35 to-transparent
+                      dark:from-purple-500/10" />
+      <div className="relative">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-widest text-purple-400">
             {status}
           </p>
           <h3 className="mt-2 text-xl font-bold">{title}</h3>
-          <p className="mt-1 text-sm text-white/60">{role}</p>
+          <p className="mt-1 text-sm text-neutral-800 dark:text-white/60">{role}</p>
         </div>
+    </div>
 
         {link && (
           <a
@@ -29,7 +36,9 @@ export default function QuestCard({
         )}
       </div>
 
-      <p className="mt-4 text-white/70 leading-relaxed">{description}</p>
+      <p className="mt-4 text-neutral-800 dark:text-white/70 leading-relaxed">
+        {description}
+      </p>
 
       {tags.length > 0 && (
         <div className="mt-5 flex flex-wrap gap-2">

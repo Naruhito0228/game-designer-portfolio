@@ -2,7 +2,7 @@ import SkillBar from "../components/game/SkillBar";
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-16">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-2xl font-bold">Skills</h2>
         <p className="mt-2 text-white/70">

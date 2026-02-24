@@ -2,7 +2,7 @@ import QuestCard from "../components/game/QuestCard";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="py-16">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-2xl font-bold">Projects</h2>
         <p className="mt-2 text-white/70">

@@ -1,46 +1,64 @@
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center">
-      <div className="max-w-4xl mx-auto px-6 w-full">
-        <div className="relative rounded-2xl border border-white/10 bg-white/5 p-8 sm:p-10 overflow-hidden">
+    <section
+      id="home"
+      className="min-h-[80vh] flex items-center justify-center px-6"
+    >
+      <div className="max-w-4xl w-full relative">
+        {/* soft glow behind the panel */}
+        <div className="absolute inset-0 -z-10 rounded-3xl blur-3xl bg-purple-500/15 dark:bg-purple-500/20" />
 
-          {/* Purple glow effects */}
-          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-purple-500/20 blur-3xl" />
-          <div className="absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
+        {/* Panel */}
+        <div className="relative overflow-hidden rounded-2xl border p-10 sm:p-12
+                        border-purple-200 bg-white/80
+                        dark:border-white/10 dark:bg-neutral-950/60">
 
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">
-            Game Designer in Progress
-          </p>
+          {/* subtle purple tint inside panel (works for both modes) */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-br
+                          from-purple-200/40 to-transparent
+                          dark:from-purple-500/15" />
 
-          <h1 className="mt-4 text-4xl sm:text-6xl font-bold leading-tight">
-            Building worlds, systems,
-            <span className="text-purple-300"> and player stories.</span>
-          </h1>
+          <div className="relative">
+            <p className="text-xs uppercase tracking-[0.35em] text-purple-700 dark:text-purple-300">
+              Game Designer in Progress
+            </p>
 
-          <p className="mt-5 text-white/70 max-w-2xl leading-relaxed">
-            CS student at Vrije Universiteit Amsterdam. I design and prototype
-            game experiences — quests, mechanics, and UI.
-          </p>
+            <h1 className="mt-4 text-4xl sm:text-6xl font-bold leading-tight">
+              Building worlds, systems,
+              <span className="text-purple-700 dark:text-purple-300">
+                {" "}
+                and player stories.
+              </span>
+            </h1>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center rounded-xl bg-purple-500/20 px-5 py-3 text-sm font-semibold text-purple-200 border border-purple-400/20 hover:bg-purple-500/30 transition"
-            >
-              View Quests
-            </a>
+            <p className="mt-5 max-w-2xl leading-relaxed text-neutral-800 dark:text-white/70">
+              CS student at Vrije Universiteit Amsterdam. I design and prototype
+              game experiences — quests, mechanics, and UI.
+            </p>
 
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white/80 border border-white/15 hover:bg-white/5 transition"
-            >
-              Contact
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold
+                           bg-purple-700 text-white hover:bg-purple-800 transition"
+              >
+                View Quests
+              </a>
+
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold
+                           border border-black/10 text-neutral-900 hover:bg-black/5 transition
+                           dark:border-white/15 dark:text-white/80 dark:hover:bg-white/10"
+              >
+                Contact
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-neutral-500 dark:text-white/40">
+              Tip: scroll like a game menu ✦
+            </p>
           </div>
-
-          <p className="mt-6 text-xs text-white/40">
-            Tip: scroll like a game menu ✦
-          </p>
         </div>
       </div>
     </section>
